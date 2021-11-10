@@ -6,3 +6,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main{
+  margin: 20px 40px;
+}
+
+.choices,.contents{
+  padding-right:10px;
+}
+
+h1,h2,h4{
+  font-family:Verdana;
+}
+
+table{
+  margin:20px;
+}
+
+h2{
+  padding:5px;
+}
+
+.item{
+  display: block;
+}
+
+section{
+  padding:30px 80px;
+}
+
+.detail{
+   float: left;
+}
+

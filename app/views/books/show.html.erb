@@ -1,8 +1,9 @@
-
-<h2>Title:</h2>
-<p><%= @book.title %></p>
-<h2>Body:</h2>
-<p><%= @book.body %></p>
+<section>
+ <h4 class="detail">Title:</h4>
+ <p><%= @book.title %></p>
+ <h4 class="detail">Body:</h4>
+ <p ><%= @book.body %></p>
+</section>
 
 <%= link_to "Edit", edit_book_path(@book) %>
 
