@@ -1,10 +1,10 @@
   <h1>Bookers</h1>
 
-<table class="teble">
+<table>
   <thead>
     <tr>
-      <th class="header1">Title</th>
-      <th class="header2">Body</th>
+      <th>Title</th>
+      <th>Body</th>
     </tr>
   </thead>
   <tbody>
@@ -12,12 +12,14 @@
       <% @books.each do |book| %>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
+      <td><%= link_to "Show", book_path(book.id) %></td>
+      <td><%= link_to "Edit",  edit_book_path(book.id) %></td>
+      <td><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
       <% end %>
     </tr>
   </tbody>
 
 </table>
-
 
 
 <h2>New book</h2>
