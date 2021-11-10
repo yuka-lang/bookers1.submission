@@ -11,16 +11,21 @@ class BooksController < ApplicationController
 
 
   def show
+   @books = Book.all
    @book = Book.find(params[:id])
   end
+  
 
   def create
+   @books = Book.all
+   
     @book = Book.new(book_params)
      if @book.save
       redirect_to book_path(@book.id)
      else
       render :index
      end
+     
   end
 
 
@@ -28,11 +33,18 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+
    def update
-    book = Book.find(params[:id])
-    book.update(book_params)
+    @book = Book.find(params[:id])
+    @book.update(book_params)
+    if @book.save
     redirect_to book_path(book)
+    else
+    render :edit
+    end
    end
+   
+
 
   def destroy
     book = Book.find(params[:id])
