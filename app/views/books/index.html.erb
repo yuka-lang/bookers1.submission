@@ -1,5 +1,5 @@
- <main> 
-  
+ <main>
+
   <h1>Books</h1>
 
  <table>
@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    
+
       <% @books.each do |book| %>
       <tr>
       <td class="contents"><%= book.title %></td>
@@ -20,7 +20,7 @@
       <td><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
       </tr>
       <% end %>
-    
+
   </tbody>
 
  </table>
@@ -37,14 +37,14 @@
   <% end %>
   </ul>
 <% end %>
- 
+
 
   <%= form_with model:@book, url:'/books', local:true do |f| %>
      <p>Title</p>
      <%= f.text_field :title %>
      <p>Body</p>
     <%= f.text_area :body %>
-    <p class="item"><%= f.submit 'Creste Book' %></p>
+    <p class="item"><%= f.submit 'Create Book' %></p>
   <% end %>
 
 </main>
