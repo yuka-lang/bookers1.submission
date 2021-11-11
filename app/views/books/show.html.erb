@@ -1,29 +1,19 @@
 <section>
-<p  class= "message">
- <% if notice %>
- <%= notice %>
- <% end %></p>
-
-<div>
-<% if @book.errors.any? %>
-  <p><%= @book.errors.count %> errors prohibited this book from being saved:</p>
-  <ul>
-   <% @book.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+  <p  class= "message">
+   <% if notice %>
+   <%= notice %>
    <% end %>
-  </ul>
-<% end %>
-</div>
-
+  </p>
 
  <h4 >Title:</h4>
- <p class= "title"><%= @book.title %></p>
+  <p class= "title"><%= @book.title %></p>
  <h4 >Body:</h4>
- <p ><%= @book.body %></p>
+  <p ><%= @book.body %></p>
 </section>
 
+
 <div class="choose">
-<%= link_to "Edit", edit_book_path(@book) %>
-<span>|</span>
-<%= link_to "Back", books_path %>
+ <%= link_to "Edit", edit_book_path(@book) %>
+ <span>|</span>
+ <%= link_to "Back", books_path %>
 </div>
