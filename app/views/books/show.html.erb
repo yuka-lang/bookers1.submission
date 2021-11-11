@@ -1,10 +1,18 @@
 <section>
- <h4 class="detail">Title:</h4>
- <p><%= @book.title %></p>
- <h4 class="detail">Body:</h4>
+<p  class= "message">
+ <% if notice %>
+ <%= notice %>
+ <% end %></p>
+
+
+ <h4 >Title:</h4>
+ <p class= "title"><%= @book.title %></p>
+ <h4 >Body:</h4>
  <p ><%= @book.body %></p>
 </section>
 
+<div class="choose">
 <%= link_to "Edit", edit_book_path(@book) %>
-
+<span>|</span>
 <%= link_to "Back", books_path(@book) %>
+</div>
